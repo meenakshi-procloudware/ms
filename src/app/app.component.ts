@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ms';
+  fname:any;
+  lname:any;
+  age:any;
+  gender:any;
+  contact:any;
+  email:any;
+  // fnameError:boolean;
+  nextClick(){
+    console.log("fname",this.fname);
+    if(this.fname=== ''|| this.fname === undefined){
+    // this.fnameError = true;
+    }
+  }
+  
 }
+
+
