@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ms';
-  fname:any;
+  fname:string = '';
   lname:any;
   age:any;
   gender:any;
