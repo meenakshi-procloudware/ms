@@ -1,18 +1,32 @@
+<router-outlet></router-outlet>
 <form>
   <label>First Name</label>
-  <input type="text" name="fname" [(ngModel)]="fname"><br><br><br>
+  <input type="text" name="fname" [(ngModel)]="fname">
+  <p *ngIf="fnameError">Please Enter First Name</p>
+  <br><br>
   <label>Last Name</label>
-  <input type="text" name="lname" [(ngModel)]="lname"><br><br><br>
+  <input type="text" name="lname" [(ngModel)]="lname">
+  <p *ngIf="lnameError">Please Enter Last Name</p>
+  <br><br>
   <label>Age</label>
-  <input type="number" name="age" [(ngModel)]="age"><br><br><br>
+  <input type="number" name="age" [(ngModel)]="age">
+  <p *ngIf ="ageError">please enter age</p>
+  <br><br>
   <label>Gender</label>
-  <input type="radio" name="gender"[(ngModel)]="gender" id="male" name="gender" value="male">Male<br><br><br>
-  <input type="radio" name="gender"[(ngModel)]="gender" id="female" name="gender" value="female">Female<br><br><br>
-  <input type="radio" name="gender"[(ngModel)]="gender" id="other" name="gender" value="other">Other<br><br><br>
+  <input type="radio" name="gender"[(ngModel)]="gender" id="male" name="gender" value="male">Male<br><br>
+  <input type="radio" name="gender"[(ngModel)]="gender" id="female" name="gender" value="female">Female<br><br>
+  <input type="radio" name="gender"[(ngModel)]="gender" id="other" name="gender" value="other">Other
+  <p *ngIf="genderError">Please Enter Gender</p>
+  <br><br>
   <label>Contact</label>
-  <input type="number" name="contact"[(ngModel)]="contact"><br><br><br>
+  <input type="number" name="contact"[(ngModel)]="contact">
+  <p *ngIf="contactError">Please Enter contact</p>
+  <br><br>
   <label>Email</label>
-  <input type="Email" name="email"[(ngModel)]="email"><br><br><br>
-  <button (click)="nextClick()" [disabled]="!fname || !lname || !age || !gender || !contact || !email"> SUBMIT</button>
+  <input type="Email" name="email"[(ngModel)]="Email">
+  <p *ngIf="EmailError">Please Enter Email</p>
+  <br><br>
+  <!-- <button (click)="nextClick()" [disabled]="!fname || !lname || !age || !gender || !contact || !email"> SUBMIT</button> -->
+  <button (click)="nextClick()"> SUBMIT</button>
 
 </form>
